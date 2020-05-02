@@ -24,8 +24,6 @@ int main(int argc, const char * argv[]) {
     // insert code here...
     std::cout << "Hello, World!\n";
     
-    char send[128];
-    
     //bitset - set all types of data
     std::bitset<24> wholeset;
     cout << wholeset << endl;
@@ -58,7 +56,8 @@ int main(int argc, const char * argv[]) {
     char buffer[10] = {0};
     
     //occupy 0-3
-    int xi = 12345678;
+    float xif = 4800.123214;
+    int xi = xif * 1000;
     cout << sizeof(xi) << endl;
     memcpy(buffer, &xi, sizeof(xi));
     
@@ -67,7 +66,8 @@ int main(int argc, const char * argv[]) {
     memcpy(&xr1, buffer, 4);
     
     //occupy 4-7
-    int xii = 87654321;
+    float xiif = -3800.123214;
+    int xii = xiif * 1000;
     cout << sizeof(xii) << endl;
     memcpy(&buffer[4], &xii, sizeof(xii));
     
